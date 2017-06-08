@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f2f1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/request_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="출발지 : " />
+
+            <TextView
+                android:id="@+id/request_desti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="목적지 : 영진전문대학교 본관" />
+
+            <TextView
+                android:id="@+id/request_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="물품 종류 : " />
+
+            <TextView
+                android:id="@+id/request_pickup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="픽업 시간 : " />
+
+            <TextView
+                android:id="@+id/request_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="금액 : " />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/request_tender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+android:layout_marginLeft="50dp"
+                android:text="입찰" />
+
+            <Button
+                android:id="@+id/request_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:text="취소" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

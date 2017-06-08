@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f2f1">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/worklist_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="출발지" />
+
+        <TextView
+            android:id="@+id/worklist_desti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="목적지 : 영진전문대학교 본관" />
+
+        <TextView
+            android:id="@+id/worklist_pickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="픽업 시간 : " />
+
+        <TextView
+            android:id="@+id/worklist_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="물품명/수량 : " />
+
+        <TextView
+            android:id="@+id/worklist_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="금액 : " />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/worklist_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentLeft="true"
+                android:text="전화걸기" />
+
+            <Button
+                android:id="@+id/worklist_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="배송 완료" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/first_navigation_request"
+            android:title="신청목록"/>
+
+        <item
+            android:id="@+id/second_navigation_work"
+            android:title="입찰된 목록"/>
+
+        <item
+            android:id="@+id/third_navigation_information"
+            android:title="내 정보"/>
+
+        <item
+            android:id="@+id/forth_navigation_profit"
+            android:title="수익"/>
+
+        <item
+            android:id="@+id/fifth_navigation_setting"
+            android:title="환경설정"/>
+
+
+
+
+    </group>
+</menu>
