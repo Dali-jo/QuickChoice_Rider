@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#DDDDDD">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,6 +15,8 @@
             android:layout_width="180dp"
             android:layout_height="48dp"
             android:text="확인"
+            android:background="@drawable/button"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -26,6 +29,8 @@
             android:layout_width="180dp"
             android:layout_height="48dp"
             android:text="취소"
+            android:textSize="20dp"
+            android:background="@drawable/button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -38,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintHorizontal_bias="0.17"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -49,10 +54,42 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:text="요청하실 금액을 입력하세요."
+            android:text="금액"
             android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.43"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.229"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:id="@+id/textView99"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="을 입력하세요."
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.758"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.229"
+            android:layout_marginLeft="4dp" />
+
+        <TextView
+            android:id="@+id/textView88"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="요청하실 "
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.306"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -60,18 +97,19 @@
 
         <EditText
             android:id="@+id/bid_money"
-            android:layout_width="259dp"
-            android:layout_height="51dp"
+            android:layout_width="167dp"
+            android:layout_height="36dp"
             android:ems="10"
             android:gravity="right"
             android:hint="원"
+            android:background="#FFFFFF"
             android:inputType="textPersonName"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.723"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.347" />
+            app:layout_constraintVertical_bias="0.284" />
     </android.support.constraint.ConstraintLayout>
 </LinearLayout>

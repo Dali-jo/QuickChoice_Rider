@@ -15,10 +15,14 @@ public class worklist_item {
     private String pay;
     private String fast;
     private String memo;
+    private String startlati;
+    private String startlongi;
+    private String destinationlati;
+    private String destinationlongi;
 
 
 
-    public worklist_item(String start,String desti,String pickup,String category,String money,String phone,String no,String pay,String fast,String memo){
+    public worklist_item(String start,String desti,String pickup,String category,String money,String phone,String no,String pay,String fast,String memo,String startlati,String startlongi,String destinationlati,String destinationlongi){
         this.start=start;
         this.desti=desti;
         this.pickup=pickup;
@@ -29,7 +33,10 @@ public class worklist_item {
         this.pay=pay;
         this.fast=fast;
         this.memo=memo;
-
+        this.startlati=startlati;
+        this.startlongi=startlongi;
+        this.destinationlati=destinationlati;
+        this.destinationlongi=destinationlongi;
     }
 
     public String getStart(){return start;}
@@ -42,4 +49,8 @@ public class worklist_item {
     public String getPay(){return pay;}
     public String getFast(){return fast;}
     public String getMemo(){return memo;}
+    public String getStartlati(){return startlati;}
+    public String getStartlongi(){return startlongi;}
+    public String getDestinationlati(){return destinationlati;}
+    public String getDestinationlongi(){return destinationlongi;}
 }

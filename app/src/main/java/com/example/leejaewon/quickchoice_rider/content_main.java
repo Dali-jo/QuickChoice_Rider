@@ -172,7 +172,7 @@ public class content_main extends Fragment {
 //            JSONArray jsonArray=new JSONArray(wrapObject.toString());
             for(int i=0;i<jsonArray.size();i++){
                 JSONObject dataObject1 = (JSONObject)jsonArray.get(i);
-                requestlist_item item = new requestlist_item((String)dataObject1.get("no"),(String)dataObject1.get("startadd"),(String)dataObject1.get("destinationadd"),(String)dataObject1.get("hopemoney"),(String)dataObject1.get("state"),(String)dataObject1.get("userid"),(String)dataObject1.get("category"),(String)dataObject1.get("pay"),(String)dataObject1.get("fast"),(String)dataObject1.get("memo"),(String)dataObject1.get("pickup"));
+                requestlist_item item = new requestlist_item((String)dataObject1.get("no"),(String)dataObject1.get("startadd"),(String)dataObject1.get("destinationadd"),(String)dataObject1.get("hopemoney"),(String)dataObject1.get("state"),(String)dataObject1.get("userid"),(String)dataObject1.get("category"),(String)dataObject1.get("pay"),(String)dataObject1.get("fast"),(String)dataObject1.get("memo"),(String)dataObject1.get("pickup"),(String)dataObject1.get("startlati"),(String)dataObject1.get("startlongi"),(String)dataObject1.get("destinationlati"),(String)dataObject1.get("destinationlongi"));
 
 
                 requestlist_item_ArrayList.add(item);

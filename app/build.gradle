@@ -39,6 +39,7 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:10.2.6'
     compile 'com.google.android.gms:play-services-location:10.2.6'
     compile 'com.google.android.gms:play-services-places:10.2.6'
+    compile 'com.google.firebase:firebase-messaging:10.2.6'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile files('libs/commons-codec-1.9.jar')
@@ -53,3 +54,4 @@ dependencies {
     compile files('libs/jna-platform-4.1.0.jar')
     compile files('libs/json-simple-1.1.1.jar')
 }
+apply plugin: 'com.google.gms.google-services'

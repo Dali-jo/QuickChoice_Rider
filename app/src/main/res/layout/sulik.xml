@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#DDDDDD">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -21,107 +22,121 @@
             app:layout_constraintHorizontal_bias="0.555" />
 
         <TextView
-            android:id="@+id/textView18"
-            android:layout_width="178dp"
-            android:layout_height="31dp"
+            android:id="@+id/profit_month"
+            android:layout_width="181dp"
+            android:layout_height="38dp"
             android:text="2017년 4월"
             android:textSize="20dp"
+            android:background="@drawable/sulikshape"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.922"
+            app:layout_constraintHorizontal_bias="0.822"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.809" />
+            app:layout_constraintVertical_bias="0.82" />
 
         <TextView
-            android:id="@+id/textView23"
-            android:layout_width="178dp"
-            android:layout_height="31dp"
+            android:id="@+id/profit_day"
+            android:layout_width="181dp"
+            android:layout_height="38dp"
             android:text="2017년 4월 14일"
             android:textSize="20dp"
+            android:background="@drawable/sulikshape"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.922"
+            app:layout_constraintHorizontal_bias="0.822"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.63" />
+            app:layout_constraintVertical_bias="0.638" />
 
         <TextView
-            android:id="@+id/textView19"
+            android:id="@+id/profit_month_money"
             android:layout_width="145dp"
             android:layout_height="33dp"
             android:text="총액 940000원"
             android:textSize="18dp"
+            android:gravity="right"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintHorizontal_bias="0.849"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.93" />
 
         <TextView
-            android:id="@+id/textView25"
+            android:id="@+id/profit_day_money"
             android:layout_width="145dp"
             android:layout_height="33dp"
             android:text="총액 38000원"
             android:textSize="18dp"
+            android:gravity="right"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.933"
+            app:layout_constraintHorizontal_bias="0.849"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.75" />
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/profit_month_count"
             android:layout_width="125dp"
             android:layout_height="32dp"
             android:text="총 XX건"
             android:textSize="18dp"
+            android:gravity="right"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.861"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.869" />
+            app:layout_constraintVertical_bias="0.882"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="4dp" />
 
         <TextView
-            android:id="@+id/textView24"
+            android:id="@+id/profit_day_count"
             android:layout_width="125dp"
             android:layout_height="32dp"
             android:text="총 X건"
             android:textSize="18dp"
+            android:gravity="right"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.891"
+            app:layout_constraintHorizontal_bias="0.861"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.689" />
+            app:layout_constraintVertical_bias="0.702" />
 
         <TextView
             android:id="@+id/textView20"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
+            android:layout_width="110dp"
+            android:layout_height="38dp"
             android:text="이달의 수익"
             android:textSize="22dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintHorizontal_bias="0.281"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.811" />
+            app:layout_constraintVertical_bias="0.82" />
 
         <TextView
             android:id="@+id/textView22"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
+            android:layout_width="110dp"
+            android:layout_height="38dp"
             android:text="오늘의 수익"
             android:textSize="22dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintHorizontal_bias="0.281"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.635" />
+            app:layout_constraintVertical_bias="0.638" />
     </android.support.constraint.ConstraintLayout>
 </LinearLayout>

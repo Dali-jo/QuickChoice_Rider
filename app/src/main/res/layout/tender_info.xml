@@ -8,11 +8,10 @@
         android:layout_height="260dp"
         android:padding="10dp">
 
-        <ImageView
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
             android:layout_width="match_parent"
-
-            android:layout_height="match_parent"
-            android:background="#242242" />
+            android:layout_height="match_parent" />
 
     </RelativeLayout>
 

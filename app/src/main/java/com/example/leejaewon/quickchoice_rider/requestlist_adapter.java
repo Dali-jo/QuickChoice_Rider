@@ -16,6 +16,10 @@ import java.util.ArrayList;
 public class requestlist_adapter extends RecyclerView.Adapter<requestlist_viewholder>{
     private Activity mContext;
     private ArrayList<requestlist_item> requestlist_items;
+    private String startlati;
+    private String startlongi;
+    private String destinationlati;
+    private String destinationlongi;
 
     public requestlist_adapter(Activity context, ArrayList<requestlist_item> requestlist_items){
         mContext=context;
@@ -34,6 +38,10 @@ public class requestlist_adapter extends RecyclerView.Adapter<requestlist_viewho
     @Override
     public void onBindViewHolder(final requestlist_viewholder holder, int position){
         requestlist_item item = requestlist_items.get(position);
+        startlati=item.getStartlati();
+        startlongi=item.getStartlongi();
+        destinationlati=item.getDestinationlati();
+        destinationlongi=item.getDestinationlongi();
         holder.item_start.setText("출발지:"+item.getStart());
         holder.item_desti.setText("도착지:"+item.getDesti());
 //        holder.item_category.setText(item.getState());
@@ -52,6 +60,8 @@ public class requestlist_adapter extends RecyclerView.Adapter<requestlist_viewho
                         Intent intent = new Intent(mContext,bid.class);
                         intent.putExtra("no",holder.item_no);
                         intent.putExtra("id",((main)mContext).userid);
+
+
                         mContext.startActivity(intent);
 
                 }
@@ -72,7 +82,11 @@ public class requestlist_adapter extends RecyclerView.Adapter<requestlist_viewho
                         intent.putExtra("desti",desti);
                         intent.putExtra("money",money);
                         intent.putExtra("id",((main)mContext).userid);
-
+                intent.putExtra("startlati",startlati);
+                intent.putExtra("startlongi",startlongi);
+                intent.putExtra("destinationlati",destinationlati);
+                intent.putExtra("destinationlongi",destinationlongi);
+                intent.putExtra("disable","0");
                         mContext.startActivity(intent);
                 Log.i("11","aa");
             }

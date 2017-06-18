@@ -25,6 +25,10 @@ import java.util.concurrent.ExecutionException;
 public class worklist_adapter extends RecyclerView.Adapter<worklist_viewholder> {
     private Activity mContext;
     private ArrayList<worklist_item> worklist_items;
+    private String startlati;
+    private String startlongi;
+    private String destinationlati;
+    private String destinationlongi;
 
     public worklist_adapter(Activity context, ArrayList<worklist_item> worklist_items){
         mContext=context;
@@ -42,6 +46,10 @@ public class worklist_adapter extends RecyclerView.Adapter<worklist_viewholder> 
     @Override
     public void onBindViewHolder(final worklist_viewholder holder, int position){
         worklist_item item = worklist_items.get(position);
+        startlati=item.getStartlati();
+        startlongi=item.getStartlongi();
+        destinationlati=item.getDestinationlati();
+        destinationlongi=item.getDestinationlongi();
         holder.item_start.setText("출발지:"+item.getStart());
         holder.item_desti.setText("도착지:"+item.getDesti());
         holder.item_category.setText("서류");
@@ -68,6 +76,11 @@ public class worklist_adapter extends RecyclerView.Adapter<worklist_viewholder> 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext,Tender_info.class);
+                intent.putExtra("startlati",startlati);
+                intent.putExtra("startlongi",startlongi);
+                intent.putExtra("destinationlati",destinationlati);
+                intent.putExtra("destinationlongi",destinationlongi);
+                intent.putExtra("disable","1");
                 mContext.startActivity(intent);
 
             }

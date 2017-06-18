@@ -2,13 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f0f2f1">
+    android:background="#dddddd">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffff"
+        android:background="@drawable/circlebutton"
+        android:layout_margin="10dp"
         android:orientation="vertical"
         android:padding="4dp">
 
@@ -16,31 +17,36 @@
             android:id="@+id/worklist_start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="출발지" />
+            android:text="출발지"
+            android:textSize="17dp"/>
 
         <TextView
             android:id="@+id/worklist_desti"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="목적지 : 영진전문대학교 본관" />
+            android:text="목적지 : 영진전문대학교 본관"
+            android:textSize="17dp"/>
 
         <TextView
             android:id="@+id/worklist_pickup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="픽업 시간 : " />
+            android:text="픽업 시간 : "
+            android:textSize="17dp"/>
 
         <TextView
             android:id="@+id/worklist_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="물품명/수량 : " />
+            android:text="물품명/수량 : "
+            android:textSize="17dp"/>
 
         <TextView
             android:id="@+id/worklist_money"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="금액 : " />
+            android:text="금액 : "
+            android:textSize="17dp"/>
 
 
         <RelativeLayout
@@ -56,7 +62,9 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="20dp"
                 android:layout_alignParentLeft="true"
-                android:text="전화걸기" />
+                android:background="@drawable/call"
+                android:text="주문자에게 전화걸기"
+                android:textSize="18dp"/>
 
             <Button
                 android:id="@+id/worklist_finish"
@@ -65,7 +73,9 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
-                android:text="배송 완료" />
+                android:background="@drawable/clear"
+                android:text="배송 완료"
+                android:textSize="18dp"/>
 
         </RelativeLayout>
 

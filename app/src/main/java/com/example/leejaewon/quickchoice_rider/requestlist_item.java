@@ -16,9 +16,14 @@ public class requestlist_item {
     private String fast;
     private String memo;
     private String pickup;
+    private String startlati;
+    private String startlongi;
+    private String destinationlati;
+    private String destinationlongi;
 
 
-    public requestlist_item(String no, String start, String desti, String money, String state,String userid,String category,String pay,String fast,String memo,String pickup) {
+
+    public requestlist_item(String no, String start, String desti, String money, String state,String userid,String category,String pay,String fast,String memo,String pickup,String startlati,String startlongi,String destinationlati,String destinationlongi) {
         this.no=no;
         this.start=start;
         this.desti=desti;
@@ -30,6 +35,10 @@ public class requestlist_item {
         this.fast=fast;
         this.memo=memo;
         this.pickup=pickup;
+        this.startlati=startlati;
+        this.startlongi=startlongi;
+        this.destinationlati=destinationlati;
+        this.destinationlongi=destinationlongi;
     }
 
     public String getNo(){
@@ -53,6 +62,10 @@ public class requestlist_item {
     public String getFast(){return fast;}
     public String getMemo(){return memo;}
     public String getPickup(){return pickup;}
+    public String getStartlati(){return startlati;}
+    public String getStartlongi(){return startlongi;}
+    public String getDestinationlati(){return destinationlati;}
+    public String getDestinationlongi(){return destinationlongi;}
 
 
 
