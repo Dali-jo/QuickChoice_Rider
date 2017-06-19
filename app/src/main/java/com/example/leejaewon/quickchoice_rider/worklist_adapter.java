@@ -23,6 +23,11 @@ import java.util.concurrent.ExecutionException;
  */
 
 public class worklist_adapter extends RecyclerView.Adapter<worklist_viewholder> {
+
+
+
+
+
     private Activity mContext;
     private ArrayList<worklist_item> worklist_items;
     private String startlati;
@@ -61,6 +66,10 @@ public class worklist_adapter extends RecyclerView.Adapter<worklist_viewholder> 
             public void onClick(View v){
 
                 try {
+
+
+
+
                     String result;
                     CustomTask customTask = new CustomTask();
                     result=customTask.execute(holder.item_no).get();
@@ -72,20 +81,26 @@ public class worklist_adapter extends RecyclerView.Adapter<worklist_viewholder> 
                 }
             }
         });
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext,Tender_info.class);
-                intent.putExtra("startlati",startlati);
-                intent.putExtra("startlongi",startlongi);
-                intent.putExtra("destinationlati",destinationlati);
-                intent.putExtra("destinationlongi",destinationlongi);
-                intent.putExtra("disable","1");
-                mContext.startActivity(intent);
+        listener lis = new listener(item);
+        holder.itemView.setOnClickListener(lis);
 
-            }
-        });
+    }
 
+    private class listener implements View.OnClickListener{
+        worklist_item data;
+        public listener(worklist_item data){
+            this.data=data;
+        }
+        @Override
+        public void onClick(View v){
+            Intent intent = new Intent(mContext,Tender_info.class);
+            intent.putExtra("startlati",data.getStartlati());
+            intent.putExtra("startlongi",data.getStartlongi());
+            intent.putExtra("destinationlati",data.getDestinationlati());
+            intent.putExtra("destinationlongi",data.getDestinationlongi());
+            intent.putExtra("disable","1");
+            mContext.startActivity(intent);
+        }
     }
 
     @Override

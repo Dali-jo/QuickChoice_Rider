@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -44,9 +45,9 @@ public class requestlist_adapter extends RecyclerView.Adapter<requestlist_viewho
         destinationlongi=item.getDestinationlongi();
         holder.item_start.setText("출발지:"+item.getStart());
         holder.item_desti.setText("도착지:"+item.getDesti());
-//        holder.item_category.setText(item.getState());
-        holder.item_category.setText("종류:서류");
-//        holder.item_pickup.setText(item.getDriver());
+        holder.item_category.setText(item.getState());
+//        holder.item_category.setText("종류:"+item.getCategory());
+//        holder.item_pickup.setText(item.getPickup());
         holder.item_pickup.setText("픽업시간:"+item.getPickup());
         holder.item_money.setText("금액:"+item.getMoney());
         holder.item_no=item.getNo();
@@ -69,28 +70,39 @@ public class requestlist_adapter extends RecyclerView.Adapter<requestlist_viewho
             }
         });
 
-        holder.itemView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-//                String no =holder.item_no.;
-                String start =holder.item_start.getText().toString();
-                String desti =holder.item_desti.getText().toString();
-                String money =holder.item_money.getText().toString();
-                Intent intent = new Intent(mContext,Tender_info.class);
-//                        intent.putExtra("no",no);
-                        intent.putExtra("start",start);
-                        intent.putExtra("desti",desti);
-                        intent.putExtra("money",money);
-                        intent.putExtra("id",((main)mContext).userid);
-                intent.putExtra("startlati",startlati);
-                intent.putExtra("startlongi",startlongi);
-                intent.putExtra("destinationlati",destinationlati);
-                intent.putExtra("destinationlongi",destinationlongi);
-                intent.putExtra("disable","0");
-                        mContext.startActivity(intent);
-                Log.i("11","aa");
-            }
-        });
+        listener lis = new listener(item);
+        holder.itemView.setOnClickListener(lis);
+    }
+
+    private class listener implements View.OnClickListener{
+        int i;
+        requestlist_item data;
+
+        public listener(int i, requestlist_item data){
+            this.i=i;
+            this.data=data;
+        }
+        public listener(requestlist_item data){
+            this.data=data;
+        }
+
+        @Override
+        public void onClick(View v){
+
+            Intent intent = new Intent(mContext,Tender_info.class);
+
+            intent.putExtra("start",data.getStart());
+            intent.putExtra("desti",data.getDesti());
+            intent.putExtra("money",data.getMoney());
+            intent.putExtra("id",((main)mContext).userid);
+            intent.putExtra("pickup", data.getPickup());
+            intent.putExtra("startlati",data.getStartlati());
+            intent.putExtra("startlongi",data.getStartlongi());
+            intent.putExtra("destinationlati",data.getDestinationlati());
+            intent.putExtra("destinationlongi",data.getDestinationlongi());
+            intent.putExtra("disable","0");
+            mContext.startActivity(intent);
+        }
     }
 
     @Override

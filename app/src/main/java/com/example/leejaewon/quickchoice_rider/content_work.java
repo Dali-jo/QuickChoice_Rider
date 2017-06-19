@@ -26,6 +26,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
 
 /**
  * Created by LeeJaeWon on 2017-05-19.
@@ -49,7 +50,14 @@ public class content_work extends Fragment {
         worklistView.setHasFixedSize(true);
 
         CustomTask customTask = new CustomTask();
-        customTask.execute();
+        try {
+            String s=customTask.execute(((main)getActivity()).userid).get();
+            Log.i("일거리",s);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
 
         return view;
@@ -94,7 +102,7 @@ public class content_work extends Fragment {
                 OutputStream os =httpURLConnection.getOutputStream();
 
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "EUC-KR"));
-                writer.write("&riderid=12");
+                writer.write("&riderid="+strings[0]);
                 writer.flush();
                 writer.close();
                 os.close();
